@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Juguete - Catálogo</title>
+    <style>
+        :root {
+            --bg-clean: #fcfcfc;
+            --pop-yellow: #ffd600;
+            --pastel-blue: #e3f2fd;
+            --text-dark: #111111;
+            --border-thick: 3px solid #111111;
+            --shadow-neo: 5px 5px 0px #111111;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; color: var(--text-dark); }
+        body { background-color: var(--bg-clean); padding: 15px; display: flex; flex-direction: column; align-items: center; }
+        
+        /* Encabezado Pop-Minimalista */
+        header { width: 100%; max-width: 450px; background: var(--pop-yellow); border: var(--border-thick); box-shadow: var(--shadow-neo); border-radius: 16px; padding: 20px; margin-bottom: 25px; text-align: center; }
+        header h1 { font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 5px; }
+        header p { font-size: 14px; font-weight: bold; opacity: 0.8; }
+
+        /* Grid de Juguetes Modulares */
+        .catalog-container { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 25px; }
+        
+        /* Tarjeta de Producto (Componente Independiente) */
+        .toy-card { background: white; border: var(--border-thick); box-shadow: var(--shadow-neo); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+        .image-container { background: var(--pastel-blue); width: 100%; height: 260px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: var(--border-thick); }
+        .image-placeholder { font-size: 70px; }
+        .tag-category { position: absolute; top: 12px; left: 12px; background: white; padding: 4px 10px; border: 2px solid #111; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+        
+        .card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+        .toy-title { font-size: 20px; font-weight: 900; text-transform: uppercase; }
+        .toy-desc { font-size: 13px; color: #555; line-height: 1.4; }
+        .price-section { margin-top: 5px; }
+        .price-label { font-size: 10px; text-transform: uppercase; font-weight: bold; color: #777; display: block; }
+        .price-value { font-size: 24px; font-weight: 900; }
+        
+        /* Botón de Conversión Único */
+        .btn-whatsapp { width: 100%; background: var(--pop-yellow); border-top: var(--border-thick); padding: 15px; text-align: center; font-size: 16px; font-weight: bold; text-decoration: none; text-transform: uppercase; display: block; transition: background 0.2s; }
+        .btn-whatsapp:active { background: #e6c000; }
+        
+        /* Micro-conversión Financiera */
+        .payment-footer { display: flex; justify-content: space-between; align-items: center; padding: 10px 18px; background: #f0f0f0; border-top: 1px solid #ddd; font-size: 11px; font-weight: bold; }
+        .wallet-badges span { background: #6200ee; color: white; padding: 2px 6px; border-radius: 4px; margin-left: 3px; font-size: 10px; }
+        .wallet-badges .plin { background: #00bcd4; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mundo Juguete</h1>
+        <p>Curaduría Lúdica • Elige tu favorito y coordina por WhatsApp</p>
+    </header>
+
+    <div class="catalog-container">
+        <!-- Juguete 1 -->
+        <div class="toy-card">
+            <div class="image-container">
+                <span class="tag-category">Tecnología</span>
+                <div class="image-placeholder">🤖</div>
+            </div>
+            <div class="card-body">
+                <h2 class="toy-title">Robot Apolo X1</h2>
+                <p class="toy-desc">Robot de cuerda con luces y articulaciones suaves. Cuerpo metálico y pintura sin tóxicos.</p>
+                <div class="price-section">
+                    <span class="price-label">Precio de Referencia</span>
+                    <span class="price-value">S/ 149.00</span>
+                </div>
+            </div>
+            <a href="https://wa.me" target="_blank" class="btn-whatsapp">⚡ Pedir por WhatsApp</a>
+            <div class="payment-footer">
+                <span>Envío inmediato 24-48h</span>
+                <div class="wallet-badges">Paga con <span>YAPE</span><span class="plin">PLIN</span></div>
+            </div>
+        </div>
+
+        <!-- Juguete 2 -->
+        <div class="toy-card">
+            <div class="image-container">
+                <span class="tag-category">Construcción</span>
+                <div class="image-placeholder">🧱</div>
+            </div>
+            <div class="card-body">
+                <h2 class="toy-title">Bloques Neón 120 Pzas</h2>
+                <p class="toy-desc">Bloques translúcidos que brillan con luz negra. Encajan con cualquier set estándar.</p>
+                <div class="price-section">
+                    <span class="price-label">Precio de Referencia</span>
+                    <span class="price-value">S/ 85.50</span>
+                </div>
+            </div>
+            <a href="https://wa.me" target="_blank" class="btn-whatsapp">⚡ Pedir por WhatsApp</a>
+            <div class="payment-footer">
+                <span>Envío inmediato 24-48h</span>
+                <div class="wallet-badges">Paga con <span>YAPE</span><span class="plin">PLIN</span></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
